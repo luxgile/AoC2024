@@ -21,5 +21,3 @@ parseReports text = map parseReport (lines text)
 main = do
   contents <- readFile "day_02.txt"
   print $ foldr ((\x acc -> if x then acc + 1 else acc) . snd . isSafe None) 0 (parseReports contents)
-
--- 479
